@@ -1,62 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- tailwind and daisyUI  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <!-- header section start   -->
-    <header>
-        <!-- nav section start   -->
-        <nav>
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                    <div class="dropdown">
-                        <label tabindex="0" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </label>
-                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li>
-                                <a>Parent</a>
-                                <ul class="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- font poppins   -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <!-- tailwind and daisyUI  -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- style  -->
+        <style>
+            .font-poppins {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        backgroundImage: {
+                            'hero-bg': "url('./images/others/hero-bg.jpg')"
+                        },
+                    },
+                },
+            }
+        </script>
+    </head>
+
+    <body>
+        <!-- header section start   -->
+        <header class="bg-hero-bg bg-cover bg-no-repeat bg-center min-h-screen">
+            <div class="hero-overlay bg-opacity-60 ">
+                <!-- nav section start   -->
+                <nav class="max-w-6xl mx-auto  ">
+                    <div class="navbar bg-transparent py-6">
+                        <div class="flex-1">
+                            <div class="dropdown">
+                                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6h16M4 12h8m-8 6h16" />
+                                    </svg>
+                                </label>
+                                <ul tabindex="0"
+                                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-xl w-52">
+                                    <li><a class="font-semibold font-poppins">Home</a></li>
+                                    <li><a class="font-semibold font-poppins">Shop</a></li>
+                                    <li><a class="font-semibold font-poppins">News</a></li>
+                                    <li><a class="font-semibold font-poppins">Contact</a></li>
                                 </ul>
-                            </li>
-                            <li><a>Item 3</a></li>
-                        </ul>
+                            </div>
+                            <a
+                                class="btn bg-transparent font-poppins text-white normal-case border-none hover:bg-transparent text-xl md:text-3xl font-bold gap-0">
+                                <span class="text-[#E76F51] font-bold">B</span>iker
+                                <span class="text-[#E76F51] font-bold">Z</span>one</a>
+                        </div>
+                        <div class="navbar-center hidden lg:flex">
+                            <ul class="menu menu-horizontal  px-1">
+                                <li><a class="font-semibold font-poppins  md:text-white  hover:text-[#ffa28b]">Home</a></li>
+                                <li><a class="font-semibold font-poppins  md:text-white  hover:text-[#ffa28b]">Shop</a></li>
+                                <li><a class="font-semibold font-poppins  md:text-white  hover:text-[#ffa28b]">News</a></li>
+                                <li><a class="font-semibold font-poppins  md:text-white  hover:text-[#ffa28b]">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <a class="btn bg-[#E76F51] border-none font-poppins text-white hover:bg-[#E76F51]">Button</a>
+                        </div>
                     </div>
-                    <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li tabindex="0">
-                            <details>
-                                <summary>Parent</summary>
-                                <ul class="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                        <li><a>Item 3</a></li>
-                    </ul>
-                </div>
-                <div class="navbar-end">
-                    <a class="btn">Button</a>
+                </nav>
+                <!-- hero section  -->
+                <div class="  flex items-center max-w-6xl mx-auto bg-transparent min-h-[calc(100vh-100px)]">
+
+                    <div class="px-8 md:w-1/2 ">
+                        <h1 class="text-5xl md:text-6xl text-white font-bold font-poppins">Box Office News!</h1>
+                        <p class=" text-white py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                            exercitationem
+                            quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <button class="btn bg-[#E76F51] border-none font-poppins text-white hover:bg-[#E76F51]">Get Started</button>
+                    </div>
+                    <!-- empty -->
+                    <div class="w-1/2">
+                        
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!-- header section end   -->
-</body>
+        </header>
+        <!-- header section end   -->
+    </body>
+
 </html>
